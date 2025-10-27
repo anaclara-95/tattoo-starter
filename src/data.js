@@ -129,7 +129,7 @@ export const testimonialData = [
   {
     quoteImg: QuoteImg,
     message:
-      "The entire team is extremely kind and friendly. They're fantastic. They're great at what they do! And it's unique.They will properly consult with you.",
+      "The entire team is extremely kind and friendly. They're fantastic. They're great at what they do! And it's unique. They will properly consult with you.",
     name: 'Jack Geoffrey',
     occupation: 'Tattoo Artist',
   },
