@@ -27,21 +27,21 @@ export const headerData = {
 
 export const navData = {
   items: [
-    { href: '/', name: 'Home' },
-    { href: '/', name: 'About' },
-    { href: '/', name: 'Gallery' },
-    { href: '/', name: 'Interview' },
-    { href: '/', name: 'Articles' },
-    { href: '/', name: 'Contact' },
+    { href: '#home', name: 'Home' },
+    { href: '#about', name: 'About' },
+    { href: '#gallery', name: 'Gallery' },
+    { href: '#interview', name: 'Interview' },
+    { href: '#', name: 'Articles' },
+    { href: '#contact', name: 'Contact' },
   ],
 };
 
 export const socialData = [
-  { href: '/', icon: <GrFacebookOption /> },
-  { href: '/', icon: <IoLogoInstagram /> },
-  { href: '/', icon: <IoLogoPinterest /> },
-  { href: '/', icon: <IoLogoTwitter /> },
-  { href: '/', icon: <IoLogoYoutube /> },
+  { href: 'https://www.facebook.com/', icon: <GrFacebookOption /> },
+  { href: 'https://www.instagram.com/', icon: <IoLogoInstagram /> },
+  { href: 'https://www.pinterest.com/', icon: <IoLogoPinterest /> },
+  { href: 'https://x.com/', icon: <IoLogoTwitter /> },
+  { href: 'https://www.youtube.com/', icon: <IoLogoYoutube /> },
 ];
 
 export const heroData = {
@@ -211,10 +211,10 @@ export const footerData = {
   links: {
     title: 'Useful links',
     items: [
-      { href: '/', name: 'About me' },
-      { href: '/', name: 'My gallery' },
-      { href: '/', name: 'My services' },
-      { href: '/', name: 'Contact me' },
+      { href: '#about', name: 'About me' },
+      { href: '#gallery', name: 'My gallery' },
+      { href: '#services', name: 'My services' },
+      { href: '#contact', name: 'Contact me' },
     ],
   },
   program: {

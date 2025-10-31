@@ -22,7 +22,7 @@ const container = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ onDemoClick }) => {
   //destructure hero data
 
   const { title, subtitle, btnText, btnIcon } = heroData;
@@ -43,7 +43,7 @@ const Hero = () => {
           className='mb-8 lg:mb-16 max-w-lg leading-relaxed'>{subtitle}</motion.p>
           {/*btn */}
           <motion.div variants={fadeIn('down')}>
-            <button className = 'btn btn-sm lg:btn-lg btn-outline mx-auto lg:max-0'>
+            <button onClick={onDemoClick} className = 'btn btn-sm lg:btn-lg btn-outline mx-auto lg:max-0'>
               {btnText} <div className = 'text-xl'>{btnIcon}</div>
             </button>
           </motion.div>

@@ -26,8 +26,7 @@ const Testimonial = () => {
       <div className="container mx-auto">
         <Swiper
           modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
+          
         >
           {testimonialData.map((slide, index) => {
             //destructure slide

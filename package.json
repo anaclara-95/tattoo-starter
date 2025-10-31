@@ -1,5 +1,6 @@
 {
   "name": "tattoo",
+  "homepage": "https://anaclara-95.github.io/tattoo-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +14,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +41,7 @@
     "@types/swiper": "^6.0.0",
     "autoprefixer": "^10.4.12",
     "framer-motion": "^7.5.2",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.16",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",

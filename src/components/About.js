@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 //import variants
 import {fadeIn} from '../variants';
 
-const About = () => {
+const About = ({ onDemoClick }) => {
   //destructure about data
   const { title, subtitle1, subtitle2, btnText, btnIcon } = aboutData;
   return (
@@ -34,7 +34,7 @@ const About = () => {
             <div className = 'max-w-[530px] text-grey'>
               <p className = 'mb-6'>{subtitle1}</p>
               <p className= 'mb-9'>{subtitle2}</p>
-              <button className=  'btn btn-lg btn-link'>
+              <button onClick={onDemoClick} className='btn btn-lg btn-link'>
                 {btnText} <div className = 'text-xl'>{btnIcon}</div>
               </button>
             </div>

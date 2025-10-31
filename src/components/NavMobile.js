@@ -7,7 +7,7 @@ import Socials from './Socials';
 
 
 
-const NavMobile = () => {
+const NavMobile = ({ setNavMobile }) => {
   //destructure nav data 
   const { items } = navData;
   return (
@@ -16,7 +16,10 @@ const NavMobile = () => {
         {items.map((item, index) => {
           return (
             <li key={index}>
-              <a className = 'text-2xl font-primary uppercase text-black' href={item.href}>{item.name}</a>
+              <a className = 'text-2xl font-primary uppercase text-black'
+                 href={item.href}
+                 onClick={() => setNavMobile(false)}>{item.name}
+              </a>
             </li>
           );
         })}

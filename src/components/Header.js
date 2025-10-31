@@ -24,10 +24,9 @@ const Header = () => {
   });
   return (
     <header
-      className={`${
-        isActive ? "h-[100px] lg:h-[110px] shadow-lg" : "h-[120px] lg:h-[150px]"} 
+      className={`${isActive ? "h-[100px] lg:h-[110px] shadow-lg" : "h-[120px] lg:h-[150px]"} 
         fixed bg-white left-0 right-0 z-10 max-w-[1920px] w-full mx-auto transition-all duration-300`}>
-    
+
       <div className="flex justify-between items-center h-full pl-[50px] pr-[60px]">
         {/* logo */}
         <a href="/">
@@ -45,17 +44,25 @@ const Header = () => {
           <TiThMenuOutline className="text-3xl" />
         </div>
         {/* nav mobile - showing by default - hidden on desktop */}
+        {navMobile && (
+          <div
+            className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm`} // 🔹 fondo semitransparente
+            onClick={() => setNavMobile(false)} // 🔹 cierra al hacer clic afuera
+          >
+            
+          </div>
+        )}
+
         <div
           className={`${navMobile ? "max-h-full" : "max-h-0"}
-        ${
-          isActive ? "top-[100px] lg:top-[110px]" : "top-[120px] lg:top-[150px]"
-        }
+        ${isActive ? "top-[100px] lg:top-[110px]" : "top-[120px] lg:top-[150px]"
+            }
         fixed bg-white w-full h-full left-0 z-50 transition-all duration-300 overflow-y-auto`}
         >
-          <NavMobile />
+          <NavMobile setNavMobile={setNavMobile} />
         </div>
         {/* social icons - initially hidden - show on desktop */}
-        <div className = 'hidden xl:flex'>
+        <div className='hidden xl:flex'>
           <Socials />
         </div>
       </div>

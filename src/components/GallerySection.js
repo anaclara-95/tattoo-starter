@@ -18,7 +18,7 @@ const slides = galleryData.images.map(({original, width, height})=> ({
   height,
 }));
 
-const GallerySection = () => {
+const GallerySection = ({ onDemoClick }) => {
   //index state
   const [index, setIndex] = useState(-1);
   //destructure gallery data
@@ -61,7 +61,7 @@ const GallerySection = () => {
     whileInView = {'show'}
     viewport = {{once: false, amount: 0.2}}
     className = 'flex justify-center'>
-    <button className = 'btn btn-lg btn-dark'>
+    <button onClick={onDemoClick} className = 'btn btn-lg btn-dark'>
       {btnText} <div className = 'text-xl'>{btnIcon}</div>
     </button>
   </motion.div>

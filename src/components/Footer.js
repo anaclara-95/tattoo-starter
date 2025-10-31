@@ -17,7 +17,7 @@ const staggerContainer = {
   },
 };
 
-const Footer = () => {
+const Footer = ({ onDemoClick }) => {
   //destructure footer data
   const { about, links, program, newsletter } = footerData;
   return (
@@ -116,7 +116,7 @@ const Footer = () => {
                 placeholder={newsletter.form.placeholder}
                 type="text"
               />
-              <button className="text-2xl cursor-pointer" type="submit">
+              <button onClick={onDemoClick} className="text-2xl cursor-pointer" type="submit">
                 {newsletter.form.icon}
               </button>
             </form>

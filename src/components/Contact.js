@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 //import fade in
 import { fadeIn } from "../variants";
 
-const Contact = () => {
+const Contact = ({ onDemoClick }) => {
   //destructure contact data
   const { title, info, form } = contactData;
   return (
@@ -58,12 +58,14 @@ const Contact = () => {
                       </div>
                     </div>
                     {/* link */}
-                    <a
+                    <button
+
+                      onClick={onDemoClick}
                       className="font-medium border-b border-dark pb-[5px]"
                       href="#"
                     >
                       {link}
-                    </a>
+                    </button>
                   </div>
                 );
               })}
@@ -79,22 +81,25 @@ const Contact = () => {
           >
             <form className="flex flex-col gap-y-10 w-full">
               <input
+                
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.name}
                 type="text"
               />
               <input
+                
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.email}
                 type="text"
               />
               <input
+                
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.message}
                 type="text"
               />
               {/* button */}
-              <button className="btn btn-sm btn-dark self-start">
+              <button onClick={onDemoClick} className="btn btn-sm btn-dark self-start">
                 {form.btnText}
               </button>
             </form>
