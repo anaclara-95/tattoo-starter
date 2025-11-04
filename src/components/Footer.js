@@ -109,14 +109,19 @@ const Footer = ({ onDemoClick }) => {
             <div className="leading-relaxed mb-9 text-[#dbdbdb]">
               {newsletter.subtitle}
             </div>
-            <form className="flex justify-between items-start border-b border-[#b6b6b6]">
+            <form 
+            onSubmit={(e) => e.preventDefault()} 
+            className="flex justify-between items-start border-b border-[#b6b6b6]">
               <input
                 className="outline-none
                   placeholder:text-base italic placeholder:capitalize bg-transparent pb-2"
                 placeholder={newsletter.form.placeholder}
                 type="text"
               />
-              <button onClick={onDemoClick} className="text-2xl cursor-pointer" type="submit">
+              <button
+              type="button"            // importantísimo: evita submit 
+              onClick={onDemoClick} 
+              className="text-2xl cursor-pointer" type="submit">
                 {newsletter.form.icon}
               </button>
             </form>

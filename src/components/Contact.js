@@ -79,27 +79,33 @@ const Contact = ({ onDemoClick }) => {
             viewport={{ once: false, amount: 0.4 }}
             className="flex-1 xl:pl-[40px] flex justify-center items-center"
           >
-            <form className="flex flex-col gap-y-10 w-full">
+            <form 
+            onSubmit={(e) => e.preventDefault()} 
+            className="flex flex-col gap-y-10 w-full">
               <input
-                
+
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.name}
                 type="text"
               />
               <input
-                
+
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.email}
                 type="text"
               />
               <input
-                
+
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.message}
                 type="text"
               />
               {/* button */}
-              <button onClick={onDemoClick} className="btn btn-sm btn-dark self-start">
+              <button 
+
+              type="button"                    // evita que actúe como submit          
+              onClick={onDemoClick}            // abre el modal que se pasó desde App.js
+              className="btn btn-sm btn-dark self-start">
                 {form.btnText}
               </button>
             </form>
@@ -110,4 +116,4 @@ const Contact = ({ onDemoClick }) => {
   );
 };
 
-export default Contact;
+export default Contact; 
