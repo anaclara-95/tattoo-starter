@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className='max-w-[1920px] mx-auto overflow-hidden bg-white'>
-      <Header />
+      <Header onDemoClick={handleDemoClick}/>
       <section id="home">
         <Hero onDemoClick={handleDemoClick} />
       </section>

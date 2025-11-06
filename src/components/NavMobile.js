@@ -7,7 +7,7 @@ import Socials from './Socials';
 
 
 
-const NavMobile = ({ setNavMobile }) => {
+const NavMobile = ({ setNavMobile, onDemoClick }) => {
   //destructure nav data 
   const { items } = navData;
   return (
@@ -18,7 +18,15 @@ const NavMobile = ({ setNavMobile }) => {
             <li key={index}>
               <a className = 'text-2xl font-primary uppercase text-black'
                  href={item.href}
-                 onClick={() => setNavMobile(false)}>{item.name}
+                onClick={(e) => {
+                if (item.modal) {
+                  e.preventDefault();
+                  onDemoClick();
+                }
+                setNavMobile(false);
+              }}
+                 
+                 >{item.name}
               </a>
             </li>
           );

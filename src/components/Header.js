@@ -9,7 +9,7 @@ import Socials from "./Socials";
 //import icons
 import { TiThMenuOutline } from "react-icons/ti";
 
-const Header = () => {
+const Header = ({ onDemoClick }) => {
   //destructure header data
   const { logo } = headerData;
   //header state
@@ -34,7 +34,7 @@ const Header = () => {
         </a>
         {/* nav - initially hidden - show on desktop */}
         <div className="hidden xl:flex">
-          <Nav />
+          <Nav onDemoClick={onDemoClick}/>
         </div>
         {/* nav menu btn - showing by default - hidden on desktop mode */}
         <div
@@ -46,8 +46,9 @@ const Header = () => {
         {/* nav mobile - showing by default - hidden on desktop */}
         {navMobile && (
           <div
-            className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm`} // 🔹 fondo semitransparente
-            onClick={() => setNavMobile(false)} // 🔹 cierra al hacer clic afuera
+            className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm`} //  fondo semitransparente
+            onClick={() => setNavMobile(false)} //  cierra al hacer clic afuera
+            onDemoClick={onDemoClick} 
           >
             
           </div>
@@ -59,7 +60,7 @@ const Header = () => {
             }
         fixed bg-white w-full h-full left-0 z-50 transition-all duration-300 overflow-y-auto`}
         >
-          <NavMobile setNavMobile={setNavMobile} />
+          <NavMobile setNavMobile={setNavMobile}/>
         </div>
         {/* social icons - initially hidden - show on desktop */}
         <div className='hidden xl:flex'>

@@ -2,7 +2,7 @@ import React from 'react';
 //import nav data 
 import { navData } from '../data'; 
 
-const Nav = () => {
+const Nav = ({ onDemoClick }) => {
 //destructure nav data
 const { items } = navData;
 return (
@@ -11,7 +11,16 @@ return (
     {items.map((item, index) => {
       return (
         <li key = {index}>
-          <a className = 'link hover:border-b-2 hover:border-dark transition duration-300' href = {item.href}>{item.name}</a>
+          <a 
+          className = 'link hover:border-b-2 hover:border-dark transition duration-300' 
+          href = {item.href}
+          onClick={(e) => {
+                if (item.modal) {
+                  e.preventDefault();
+                  onDemoClick();
+                }
+              }}
+          >{item.name}</a>
         </li>
       );
     })}
